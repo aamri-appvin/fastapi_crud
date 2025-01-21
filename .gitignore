@@ -1,0 +1,53 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+/my_env/
+
+/.history/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+
+# Python wheels
+*.whl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pytest
+*.cover
+*.coverage
+*.hypothesis/
+.pytest_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# MySQL
+*.sql
+
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# pytest and other test-specific files
+*.test
+*.tests
