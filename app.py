@@ -41,17 +41,6 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(db_user)
     return db_user
 
-# @app.post("/users/", response_model=UserResponse)
-# def create_user(user: UserCreate, db: Session = Depends(get_db)):
-#     db_user = User(name=user.name, email=user.email, password=user.password)  # You can hash the password here
-#     db.add(db_user)
-#     db.commit()
-#     db.refresh(db_user)
-#     return db_user
-    # new_user = {"id": len(fake_db) + 1, "name": user.name, "email": user.email}
-    # fake_db.append(new_user)
-    # return new_user
-
 @app.get("/users/{user_id}", response_model=UserResponse)
 def read_user(user_id: int, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.id == user_id).first()
